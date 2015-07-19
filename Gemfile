@@ -33,6 +33,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+
+  # Better error messages when rails has an error
+  gem 'binding_of_caller'
+  gem 'better_errors'
+
+  # Improvements for Ruby's IRB console, like colored output and a lot of debugging and introspection
+  # methods. Unlike with PRY, you are still in your normal IRB. It is designed to work out-of-the-box,
+  # so there is no reason to not use it!
+  # You also need to add "require 'irbtools/more'" in yor ~/.irbrc file
+  gem 'irbtools-more', require: 'irbtools/binding'
+
+  # Awesome Print is a Ruby library that pretty prints Ruby objects in full color exposing their
+  # internal structure with proper indentation. Rails ActiveRecord objects and usage within Rails
+  # templates are supported via included mixins.
+  gem 'awesome_print'
+ 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
